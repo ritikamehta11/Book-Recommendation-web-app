@@ -1,0 +1,7 @@
+input[type='radio'][name='genre']
+ { display:none;
+ }
+
+ label{
+    border: 1px solid blue;
+ }

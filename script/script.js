@@ -1,0 +1,1 @@
+console.log(document.getElementByName(genre));
