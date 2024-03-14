@@ -1,7 +1,27 @@
-input[type='radio'][name='genre']
- { display:none;
+.custom-radio-group {
+   display: flex;
+   flex-direction: column;
  }
-
- label{
-    border: 1px solid blue;
+ 
+ .custom-radio {
+   display: flex;
+   align-items: center;
+   position: relative;
+   cursor: pointer;
  }
+ 
+ .custom-radio .checkmark {
+   height: 15px;
+   width: 15px;
+   margin-right: 10px;
+   border: 1px solid #ccc;
+ }
+ 
+ .custom-radio .checkmark.active {
+   background-color: #2196F3; /* Checked color */
+ }
+ 
+ .custom-radio input[type="hidden"] {
+   display: none;
+ }
+ 
