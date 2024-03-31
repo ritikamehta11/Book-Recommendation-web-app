@@ -1,9 +1,9 @@
-.custom-radio-group {
+/* .custom-radio-group {
    display: flex;
    flex-direction: column;
  }
  
- .custom-radio {
+ .custom-radio { 
    display: flex;
    align-items: center;
    position: relative;
@@ -18,10 +18,17 @@
  }
  
  .custom-radio .checkmark.active {
-   background-color: #2196F3; /* Checked color */
+   background-color: #2196F3; /* Checked color 
  }
  
  .custom-radio input[type="hidden"] {
    display: none;
- }
+ } */
  
+ /* #romance-authors , #mystery-thriller-authors{
+  display: none;
+ } */
+
+ body{
+  text-transform: capitalize
+ }
