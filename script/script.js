@@ -206,6 +206,10 @@ var userBook = {
 
 window.onload = pageLoad;
 function pageLoad() {
+// $("label").hide();
+    // $(".option").on("click",function(){
+    //     $(this).css("border","2px solid grey");
+    // });
     var formHandle = document.forms.bookForm;
 
     $("section").hide();
@@ -213,9 +217,10 @@ function pageLoad() {
     
 
     $("#continue").on("click", function () {
-        $("h3").hide();
-        $("#continue").hide();
-        $("#genre-form").show();
+        // $("h2").fadeOut(200);
+        // $("#continue").fadeOut(200);
+        $("#home-head").fadeOut();
+        $("#genre-form").delay(1000).fadeIn(300);
 
         if (formHandle.genre.value !== null) {
             $("#genre-to-auth").on("click", function () {
@@ -245,6 +250,10 @@ function pageLoad() {
             });
         }
         // return false;
+
+        
+
+
     });
 
     
@@ -287,6 +296,7 @@ function pageLoad() {
     
 
 function showBook() {
+    $("section").hide();
     console.log(userBook.title);
     if(userBook.img.url !== ""){
     $("img").attr("src",userBook.img.url);

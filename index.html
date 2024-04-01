@@ -1,118 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BookBeacon</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-    <script src="./script/jquery-3.7.1.js"></script>
-    <script src="script/script.js"></script>
-  </head>
-  <body>
-    <h1>BookBeacon</h1>
-    <h3>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookBeacon</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script src="./script/jquery-3.7.1.js"></script>
+  <script src="script/script.js"></script>
+</head>
+
+<body>
+  <!-- <h1>BookBeacon</h1> -->
+  <header>
+    <img id="logo-bb" src="./images/logo.png" alt="bookbeacon logo">
+  </header>
+  <div id="home-head">
+    <h2>
       Find Your Perfect Page-Turner:
       <span>Get Personalized Book Suggestions Here!</span>
-    </h3>
-    <button type="button" id="continue">Find Your Perfect Read!</button>
-
-    <form action="" id="bookForm">
-      <section id="genre-form">
-        <h4>What literary landscape would you most like to get lost in?</h4>
-
-        <input type="radio" name="genre" value="mystery/thriller" id="mys" />
-        <label for="mys">mystery/thriller</label>
-        <input type="radio" name="genre" value="romance" id="rom" />
-        <label for="rom">romantic</label>
-        <button type="button" id="genre-to-auth">Next</button>
-      </section>
-      <section id="authors">
+    </h2>
+    <button type="button" id="continue">Click here to start</button>
+  </div>
+  <form action="get" id="bookForm">
+    <section id="genre-form">
+      <h4>What literary landscape would you most like to get lost in?</h4>
+      <div class="options">
+        <div class="option mystery-opt">
+          <input type="radio" name="genre" value="mystery/thriller" id="mys" />
+          <label for="mys">mystery/thriller</label>
+        </div>
+        <div class="option">
+          <input type="radio" name="genre" value="romance" id="rom" />
+          <label for="rom">romantic</label>
+        </div>
+      </div>
+      <button type="button" id="genre-to-auth">Next</button>
+    </section>
+    <section id="authors">
       <section id="romance-authors">
         <h4>What literary landscape would you most like to get lost in?</h4>
-        <input
-          type="radio"
-          name="author"
-          value="nicholas sparks"
-          id="rom-auth-ns"
-        />
+        <input type="radio" name="author" value="nicholas sparks" id="rom-auth-ns" />
         <label for="rom-auth-ns">nicholas sparks</label>
-        <input
-          type="radio"
-          name="author"
-          value="durjoy datta"
-          id="rom-auth-dd"
-        />
+        <input type="radio" name="author" value="durjoy datta" id="rom-auth-dd" />
         <label for="rom-auth-dd">durjoy datta</label>
 
       </section>
       <section id="mystery-thriller-authors">
         <h4>What literary landscape would you most like to get lost in?</h4>
-        <input
-          type="radio"
-          name="author"
-          value="agatha christie"
-          id="mys-auth-ac"
-        />
+        <input type="radio" name="author" value="agatha christie" id="mys-auth-ac" />
         <label for="mys-auth-ac">agatha christie</label>
-        <input
-          type="radio"
-          name="author"
-          value="shari lapena"
-          id="mys-auth-sl"
-        />
+        <input type="radio" name="author" value="shari lapena" id="mys-auth-sl" />
         <label for="mys-auth-sl">shari lapena</label>
 
       </section>
       <button type="button" id="auth-to-length">Next</button>
 
     </section>
-      <section id="book-length-form">
-        <h4>What literary landscape would you most like to get lost in?</h4>
-        <input
-          type="radio"
-          name="length"
-          value="longer epics"
-          id="long-book"
-        />
-        <label for="long-book">Longer epics</label>
-        <input
-          type="radio"
-          name="length"
-          value="shorter reads"
-          id="short-book"
-        />
-        <label for="short-book">shorter reads</label>
+    <section id="book-length-form">
+      <h4>What literary landscape would you most like to get lost in?</h4>
+      <input type="radio" name="length" value="longer epics" id="long-book" />
+      <label for="long-book">Longer epics</label>
+      <input type="radio" name="length" value="shorter reads" id="short-book" />
+      <label for="short-book">shorter reads</label>
 
       <button type="button" id="length-to-story">Next</button>
 
-      </section> 
-      <section id="book-storytelling">
-        <h4>What literary landscape would you most like to get lost in?</h4>
-        <input
-          type="radio"
-          name="storytelling"
-          value="character-driven"
-          id="cd-book"
-        />
-        <label for="cd-book">character driven</label>
-        <input
-          type="radio"
-          name="storytelling"
-          value="plot-driven"
-          id="pd-book"
-        />
-        <label for="pd-book">plot driven</label>
-        <button type="button" id="submit" >submit</button>
-      </section> 
-    
-    
-      
-    </form>
-    <section id="recommended-book-info">
-        <h2>Here's a book recommendation!</h2>
-        <img src="" alt="">
-        <h3 id="book-name"></h3>
-        <p id="plot"></p>
     </section>
-  </body>
+    <section id="book-storytelling">
+      <h4>What literary landscape would you most like to get lost in?</h4>
+      <input type="radio" name="storytelling" value="character-driven" id="cd-book" />
+      <label for="cd-book">character driven</label>
+      <input type="radio" name="storytelling" value="plot-driven" id="pd-book" />
+      <label for="pd-book">plot driven</label>
+      <button type="button" id="submit">submit</button>
+    </section>
+
+
+
+  </form>
+  <section id="recommended-book-info">
+    <h2>Here's a book recommendation!</h2>
+    <img src="" alt="">
+    <h3 id="book-name"></h3>
+    <p id="plot"></p>
+  </section>
+</body>
+
 </html>

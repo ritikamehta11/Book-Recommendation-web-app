@@ -1,34 +1,108 @@
-/* .custom-radio-group {
-   display: flex;
-   flex-direction: column;
- }
- 
- .custom-radio { 
-   display: flex;
-   align-items: center;
-   position: relative;
-   cursor: pointer;
- }
- 
- .custom-radio .checkmark {
-   height: 15px;
-   width: 15px;
-   margin-right: 10px;
-   border: 1px solid #ccc;
- }
- 
- .custom-radio .checkmark.active {
-   background-color: #2196F3; /* Checked color 
- }
- 
- .custom-radio input[type="hidden"] {
-   display: none;
- } */
- 
- /* #romance-authors , #mystery-thriller-authors{
-  display: none;
- } */
+:root{
+  --dark-yelow : rgb(204,130,64);
+  --chocolate-brown: rgb(89,47,34);
+  --light-yellow : rgb(228,180,132);
+  --pale-brown : rgb(198,178,168);
+  --font-body : "roboto";
+}
 
- body{
-  text-transform: capitalize
- }
+body{
+  margin: 0;
+  padding: 2em;
+  
+}
+
+
+/* HEADER */
+#logo-bb{
+  display: block;
+  width: 16em;
+  height: auto;
+  margin: auto;
+}
+
+h2{
+  color: var(--chocolate-brown);
+  font-size: 2em;
+}
+h2>span{
+  display: block;
+  font-size: 1.3em;
+}
+
+#continue{
+width: 13em;
+height: 4em;
+/* border: 2px solid var(--chocolate-brown); */
+border: 2px solid transparent;
+color: var(--chocolate-brown);
+font-size: 1.2em;
+background-color: var(--pale-brown);
+transition: all 0.3s ease-in-out;
+}
+
+#continue:hover{
+  border: 2px solid var(--chocolate-brown);
+color: var(--light-yellow);
+background-color: var(--chocolate-brown);
+}
+
+
+/* FORM */
+form>section{
+  width: 70%;
+  margin: auto;
+  border: 1px solid black;
+  text-align: center;
+  padding: 2em;
+}
+
+form>section>h4{
+  font-size: 1.5em;
+}
+button{
+  display: block;
+  margin: auto;
+}
+input[type="radio"] {
+  display: none;
+}
+.options{
+  /* border: 0.5px solid var(--pale-brown); */
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+/* .option{
+  border: 0.5px solid transparent;
+  width: 15em;
+  height: 17em;
+  text-align: center;
+  
+  /* box-shadow: 1px 1px 5px 2px rgba(202, 202, 202, 0.858); */
+ /* // color: var(--chocolate-brown); */
+/* }  */
+label{
+  font-size: 2em;
+  display: block;
+  /* margin: 45% auto; */
+  width: 8em;
+  height: 9em;
+  /* border: 0.5px solid black; */
+  box-shadow: 1px 1px 5px 2px rgba(202, 202, 202, 0.858);
+
+}
+ /* .option:hover{ 
+  box-shadow: none;
+  box-shadow: 1px 1px 5px 2px rgba(202, 202, 202, 0.858);
+
+  border: 2px solid var(--pale-brown);
+}   */
+
+input[type="radio"]:checked + label{
+  border: 2px solid rgba(21, 21, 21, 0.829);
+}
+
