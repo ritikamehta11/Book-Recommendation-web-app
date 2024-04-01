@@ -52,13 +52,14 @@ background-color: var(--chocolate-brown);
 form>section{
   width: 70%;
   margin: auto;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   text-align: center;
   padding: 2em;
 }
 
-form>section>h4{
+h4{
   font-size: 1.5em;
+  color: var(--dark-yelow);
 }
 button{
   display: block;
@@ -70,10 +71,11 @@ input[type="radio"] {
 .options{
   /* border: 0.5px solid var(--pale-brown); */
   display: flex;
-  width: 60%;
-  justify-content: space-between;
+  width: 70%;
+  justify-content: space-around;
   align-items: center;
   margin: auto;
+  text-transform: capitalize;
 }
 
 /* .option{
@@ -85,24 +87,70 @@ input[type="radio"] {
   /* box-shadow: 1px 1px 5px 2px rgba(202, 202, 202, 0.858); */
  /* // color: var(--chocolate-brown); */
 /* }  */
+
+.option{
+  width: 40%
+}
 label{
   font-size: 2em;
   display: block;
-  /* margin: 45% auto; */
-  width: 8em;
-  height: 9em;
-  /* border: 0.5px solid black; */
+border-radius: 5px;
+  width: 90%;
+  height: auto;
+  color: var(--light-yellow);
+    padding: 2em 0.4em;
+    border: 3px solid transparent;
   box-shadow: 1px 1px 5px 2px rgba(202, 202, 202, 0.858);
 
 }
- /* .option:hover{ 
-  box-shadow: none;
+
+label:hover{
+  color: var(--light-yellow);
+}
+
+ label:hover, input[type="radio"]:checked + label{ 
+  
   box-shadow: 1px 1px 5px 2px rgba(202, 202, 202, 0.858);
+/* background-color: var(--light-yellow); */
+  border: 3.5px solid var(--light-yellow);
+  color: var(--dark-yelow);
 
-  border: 2px solid var(--pale-brown);
-}   */
+}   
+.next{
+  padding: 1.5em;
+  width: 8em;
+  text-align: center;
+margin: 2em auto;
+color: var(--chocolate-brown);
 
-input[type="radio"]:checked + label{
-  border: 2px solid rgba(21, 21, 21, 0.829);
+background-color: var(--pale-brown);
+transition: all 0.3s ease-in-out;
+}
+.next:hover{
+  border: 2px solid var(--chocolate-brown);
+color: var(--light-yellow);
+background-color: var(--chocolate-brown);
+}
+
+
+/* book-info-sec */
+#recommended-book-info>h2{
+color: var(--chocolate-brown);
+}
+#recommended-book-info{
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+#recommended-book-info>img{
+  width: 30%;
+}
+
+#book-name{
+  color: var(--dark-yelow);
+  font-size: 1.5em;
+}
+#plot{
+  color: var(--chocolate-brown);
 }
 

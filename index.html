@@ -24,56 +24,74 @@
   </div>
   <form action="get" id="bookForm">
     <section id="genre-form">
-      <h4>What literary landscape would you most like to get lost in?</h4>
+      <h4> Would you prefer to dive into heartwarming romances or unravel gripping mysteries?</h4>
       <div class="options">
         <div class="option mystery-opt">
-          <input type="radio" name="genre" value="mystery/thriller" id="mys" />
-          <label for="mys">mystery/thriller</label>
+          <input required type="radio" name="genre" value="mystery/thriller" id="mys" />
+          <label for="mys">mystery</label>
         </div>
         <div class="option">
-          <input type="radio" name="genre" value="romance" id="rom" />
+          <input required type="radio" name="genre" value="romance" id="rom" />
           <label for="rom">romantic</label>
         </div>
       </div>
-      <button type="button" id="genre-to-auth">Next</button>
+      <button type="button" id="genre-to-auth" class="next">Next</button>
     </section>
     <section id="authors">
       <section id="romance-authors">
-        <h4>What literary landscape would you most like to get lost in?</h4>
+        <h4>Ready to embark on a romantic journey? If you had to choose, whose enchanting tales would you prefer to lose yourself in:?</h4>
+        <div class="options">
+        <div class="option">
         <input type="radio" name="author" value="nicholas sparks" id="rom-auth-ns" />
         <label for="rom-auth-ns">nicholas sparks</label>
+</div>
+<div class="option">
         <input type="radio" name="author" value="durjoy datta" id="rom-auth-dd" />
         <label for="rom-auth-dd">durjoy datta</label>
+</div>
 
+</div>
       </section>
       <section id="mystery-thriller-authors">
-        <h4>What literary landscape would you most like to get lost in?</h4>
+        <h4>Ready for a mystery? Do you prefer classic detective stories or modern thrillers?</h4>
+        <div class="options">
+        <div class="option">
         <input type="radio" name="author" value="agatha christie" id="mys-auth-ac" />
-        <label for="mys-auth-ac">agatha christie</label>
+        <label for="mys-auth-ac">agatha christie</label></div>
+<div class="option">
         <input type="radio" name="author" value="shari lapena" id="mys-auth-sl" />
         <label for="mys-auth-sl">shari lapena</label>
-
+</div>
+</div>
       </section>
-      <button type="button" id="auth-to-length">Next</button>
+      <button type="button" id="auth-to-length" class="next">Next</button>
 
     </section>
     <section id="book-length-form">
-      <h4>What literary landscape would you most like to get lost in?</h4>
+      <h4>Thinking about your reading time, do you lean towards shorter stories that pack a punch, or longer tales that let you immerse yourself for hours?</h4>
+      <div class="options">
+      <div class="option">
       <input type="radio" name="length" value="longer epics" id="long-book" />
       <label for="long-book">Longer epics</label>
+</div><div class="option">
       <input type="radio" name="length" value="shorter reads" id="short-book" />
-      <label for="short-book">shorter reads</label>
-
-      <button type="button" id="length-to-story">Next</button>
+      <label for="short-book">shorter reads</label></div>
+</div>
+      <button type="button" id="length-to-story" class="next">Next</button>
 
     </section>
     <section id="book-storytelling">
-      <h4>What literary landscape would you most like to get lost in?</h4>
+      <h4>When it comes to storytelling, do you prefer being swept away by intricate plots that keep you guessing, or do you enjoy getting to know characters deeply as their stories unfold?</h4>
+      <div class="options">
+      <div class="option">
       <input type="radio" name="storytelling" value="character-driven" id="cd-book" />
-      <label for="cd-book">character driven</label>
+      <label for="cd-book">character driven</label></div>
+      <div class="option">
       <input type="radio" name="storytelling" value="plot-driven" id="pd-book" />
-      <label for="pd-book">plot driven</label>
-      <button type="button" id="submit">submit</button>
+      <label for="pd-book">plot driven</label></div>
+</div>
+
+      <button type="button" id="submit" class="next">submit</button>
     </section>
 
 
@@ -81,7 +99,7 @@
   </form>
   <section id="recommended-book-info">
     <h2>Here's a book recommendation!</h2>
-    <img src="" alt="">
+    <img id="book-cover" src="" alt="">
     <h3 id="book-name"></h3>
     <p id="plot"></p>
   </section>
