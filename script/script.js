@@ -205,57 +205,16 @@ var userBook = {
 };
 
 window.onload = pageLoad;
-function pageLoad() {
-  // $("label").hide();
-
-  // });
-//   var formHandle = document.forms.bookForm;
-
+function pageLoad() 
+{
   $("section").hide();
   $("#submit").hide();
-$("#continue").on("click", navigate) ;
-// navigate();
-//   $("#continue").on("click", function () {
-//     // $("h2").fadeOut(200);
-//     // $("#continue").fadeOut(200);
-//     $("#home-head").fadeOut();
-//     $("#genre-form").delay(1000).fadeIn(300);
-
-//     if (formHandle.genre.value !== null) {
-//       $("#genre-to-auth").on("click", function () {
-//         $("#genre-form").hide();
-//         $("#authors").show();
-//         if (formHandle.genre.value === "romance") {
-//           $("#romance-authors").show();
-//         } else {
-//           $("#mystery-thriller-authors").show();
-//         }
-
-//         $("#auth-to-length").on("click", function () {
-//           $("#authors").hide();
-//           $("#book-length-form").show();
-//           if (formHandle.length.value !== null) {
-//             $("#length-to-story").on("click", function () {
-//               $("#book-length-form").hide();
-//               $("#book-storytelling").show();
-//               $("#submit").show();
-//               $("#submit").on("click", check);
-//             });
-//           }
-//           //   return false;
-//         });
-
-//         // return false;
-//     });
-//     }
-    // return false;
- // });
-
+  $("#continue").on("click",navigate);
+  $("#home").on("click",navigate);
+  $("#add-to-list").on("click",addToList);
+  $("#list-section").on("click",showlist);
   function check() {
     var formHandle = document.forms.bookForm;
-    // $("#submit").hide();
-  
-    // alert("ww");
     userBook.genre = formHandle.genre.value;
     userBook.author = formHandle.author.value;
     userBook.length = formHandle.length.value;
@@ -288,44 +247,44 @@ $("#continue").on("click", navigate) ;
 
     return false;
   }
-  
+
   function navigate() {
     var formHandle = document.forms.bookForm;
 
     $("section").hide();
     $("#submit").hide();
-        // $("h2").fadeOut(200);
-        // $("#continue").fadeOut(200);
-        $("#home-head").fadeOut();
-        $("#genre-form").delay(1000).fadeIn(300);
-    
-        if (formHandle.genre.value !== null) {
-          $("#genre-to-auth").on("click", function () {
-            $("#genre-form").hide();
-            $("#authors").show();
-            if (formHandle.genre.value === "romance") {
-              $("#romance-authors").show();
-            } else {
-              $("#mystery-thriller-authors").show();
-            }
-    
-            $("#auth-to-length").on("click", function () {
-              $("#authors").hide();
-              $("#book-length-form").show();
-              if (formHandle.length.value !== null) {
-                $("#length-to-story").on("click", function () {
-                  $("#book-length-form").hide();
-                  $("#book-storytelling").show();
-                  $("#submit").show();
-                  $("#submit").on("click", check);
-                });
-              }
-              //   return false;
-            });
-    
-            // return false;
-        });
+    // $("h2").fadeOut(200);
+    // $("#continue").fadeOut(200);
+    $("#home-head").fadeOut();
+    $("#genre-form").delay(1000).fadeIn(300);
+
+    if (formHandle.genre.value !== null) {
+      $("#genre-to-auth").on("click", function () {
+        $("#genre-form").hide();
+        $("#authors").show();
+        if (formHandle.genre.value === "romance") {
+          $("#romance-authors").show();
+        } else {
+          $("#mystery-thriller-authors").show();
         }
+
+        $("#auth-to-length").on("click", function () {
+          $("#authors").hide();
+          $("#book-length-form").show();
+          if (formHandle.length.value !== null) {
+            $("#length-to-story").on("click", function () {
+              $("#book-length-form").hide();
+              $("#book-storytelling").show();
+              $("#submit").show();
+              $("#submit").on("click", check);
+            });
+          }
+          //   return false;
+        });
+
+        // return false;
+      });
+    }
   }
 
   function showBook() {
@@ -340,5 +299,58 @@ $("#continue").on("click", navigate) ;
     $("#plot").html(userBook.plot);
     $("#recommended-book-info").show();
   }
+
+
+function addToList(){
+  // alert("ftfy");
+  $("section").hide();
+    $("#submit").hide();
+    $("#home-head").fadeOut();
+
+    var list_display = document.getElementById("list-display");
+    var one_book = document.createElement("div");
+    var one_book_img_div = document.createElement("div");
+    var one_book_img = document.createElement("img");
+    var one_book_details = document.createElement("div");
+    var one_book_name = document.createElement("div");
+    var one_book_author = document.createElement("div");
+
+    one_book.classList.add("list-user-books");
+    one_book_img_div.classList.add("book_img_div");
+    one_book_img.classList.add("book_img");
+    one_book_details.classList.add("tbr_book_info")
+    one_book_name.classList.add("name_of_book");
+    one_book_author.classList.add("name_of_author");
+    
+    one_book_name.innerText = userBook.title;
+    one_book_author.innerText = userBook.author;
+    one_book_img.setAttribute("src",userBook.img.url);
+    one_book_img.setAttribute("alt","book cover image");
+
+    one_book_img_div.appendChild(one_book_img);
+    one_book_details.appendChild(one_book_name);
+    one_book_details.appendChild(one_book_author);
+
+    one_book.appendChild(one_book_img_div);
+    one_book.appendChild(one_book_details);
+
+    list_display.appendChild(one_book);
+
+  $("#list-display").fadeIn(2000);
+}
+function showlist(){
+  $("section").hide();
+    $("#submit").hide();
+    $("#home-head").fadeOut();
+
+    $("#list-display").fadeIn(2000);
+
+}
+
+
+
+
+
+
   return false;
 }
