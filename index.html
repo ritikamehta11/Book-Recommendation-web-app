@@ -14,6 +14,7 @@
   <!-- <h1>BookBeacon</h1> -->
   <header>
     <img id="logo-bb" src="./images/logo.png" alt="bookbeacon logo">
+    <p id="instructions">This app will recommend you book based on your choices. Please answer all the questions to get a result. Click next after choosing your option. you can add the recommended book to you list.</p>
     <nav> <ul> <li><button type="button" id="home">home</button></li>
     <li><button type="button" id="list-section">list</button></li>
     <li><button>About me</button></li></ul></nav>
@@ -26,6 +27,8 @@
     <button type="button" id="continue">Click here to start</button>
   </div>
   <form action="get" id="bookForm">
+
+    <!-- GENRE QUESTION SECTION -->
     <section id="genre-form">
       <h4> Would you prefer to dive into heartwarming romances or unravel gripping mysteries?</h4>
       <div class="options">
@@ -40,7 +43,10 @@
       </div>
       <button type="button" id="genre-to-auth" class="next">Next</button>
     </section>
+
+    <!-- AUTHOR QUESTION SECTION -->
     <section id="authors">
+      <!-- ROMANCE AUTHORS -->
       <section id="romance-authors">
         <h4>Ready to embark on a romantic journey? If you had to choose, whose enchanting tales would you prefer to lose yourself in:?</h4>
         <div class="options">
@@ -55,6 +61,8 @@
 
 </div>
       </section>
+
+      <!-- MYSTERY AUTHORS -->
       <section id="mystery-thriller-authors">
         <h4>Ready for a mystery? Do you prefer classic detective stories or modern thrillers?</h4>
         <div class="options">
@@ -70,6 +78,8 @@
       <button type="button" id="auth-to-length" class="next">Next</button>
 
     </section>
+
+    <!-- LENGTH OF THE BOOK QUESTION SECTION -->
     <section id="book-length-form">
       <h4>Thinking about your reading time, do you lean towards shorter stories that pack a punch, or longer tales that let you immerse yourself for hours?</h4>
       <div class="options">
@@ -83,6 +93,8 @@
       <button type="button" id="length-to-story" class="next">Next</button>
 
     </section>
+
+    <!-- TYPE OF BOOK SECTION -->
     <section id="book-storytelling">
       <h4>When it comes to storytelling, do you prefer being swept away by intricate plots that keep you guessing, or do you enjoy getting to know characters deeply as their stories unfold?</h4>
       <div class="options">
@@ -101,9 +113,9 @@
 
   </form>
 
-  
+    <!-- SECTION TO SHOW THE RECOMMENDED BOOK -->
   <section id="recommended-book-info">
-    <h2>Here's a book recommendation!</h2>
+    <h2 id="heading-under-show">Here's a book recommendation!</h2>
     <div id="flex-info">
     <img id="book-cover" src="" alt="">
     <div id="book-details">
@@ -114,17 +126,19 @@
   </div>
   </section>
 
-
+<!-- A SECTION TO DISPLAY THE LIST OF THE BOOKS TO BE READ BY THE USER -->
+<!-- THE COMMENTED PART IS THE LAYOUT OF THIS SECTION 
+AND TO THE RIGHT ARE THE JAVASCRIPT VARIABLES I HAVE CREATED FOR THEM -->
   <section id="list-display"> <!-- list-display -->
-    <!-- <div class="list-user-books">  one_book -->
-    <!-- <div class="book_img_div">  one_book_img_div -->
-    <!-- <img class="book_img" src="" alt=""> one_book_img -->
+    <!-- <div class="list-user-books">  "one_book" -->
+    <!-- <div class="book_img_div">  ""one_book_img_div" -->
+    <!-- <img class="book_img" src="" alt="">  "one_book_img" -->
 
     <!-- </div> -->
-    <!-- <div class="tbr_book_info">  one_book_details -->
+    <!-- <div class="tbr_book_info">  "one_book_details" -->
       
-      <!-- <div class="name_of_book"></div>  one_book_name -->
-    <!-- <div class="name_of_author"></div></div>  one_book_author -->
+      <!-- <div class="name_of_book"></div>  "one_book_name" -->
+    <!-- <div class="name_of_author"></div></div>  "one_book_author" -->
 </div>
     
 </section>

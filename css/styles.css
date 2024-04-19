@@ -81,6 +81,13 @@ color: var(--light-yellow);
 background-color: var(--chocolate-brown);
 }
 
+#instructions{
+  color:var(--chocolate-brown);
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
 
 /* FORM */
 form>section{
