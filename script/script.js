@@ -4,7 +4,7 @@ const books = [
   {
     // BOOK 1
     img: {
-      url: "./images/the notebook.jpg",
+      url: "images/the notebook.jpg",
       alt: "The Notebook",
     },
     title: "The Notebook",
@@ -17,7 +17,7 @@ const books = [
   {
     // BOOK 2
     img: {
-      url: "./images/safe haven.jpg",
+      url: "images/safe haven.jpg",
       alt: "safe haven",
     },
     title: "safe haven",
@@ -282,13 +282,7 @@ function pageLoad()
         userBook = index;
         
       } 
-      else{
-        // error handling
-        document.getElementById("heading-under-show").innerHTML = "Sorry, can not recommend a book if all the questions arenot answered. please choose again.";
-        // $("heading-under-show").html("Sorry, can not recommend a book if all the questions arenot answered. please choose again.")
-        $("heading-under-show").show();
-
-      }
+      
     });
 
     // calling the show book function to show the recommended book
