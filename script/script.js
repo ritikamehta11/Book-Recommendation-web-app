@@ -251,11 +251,7 @@ function pageLoad()
 
   // CHECK FUNCTION ACTUALLY CHECKS OR EQUATES THE USER OBJECT TO THE ARRAY OF BOOK OBJECTS TO FIND THE PARTICULAR BOOK THAT MATCHES WITH THE USER PREFERENCE
   function check() {
-    // for (let prop in userBook){
-    //   if(userBook.hasOwnProperty(prop)){
-    //     userBook[prop]="";
-    //   }
-    // }
+   
     // VAR TO HANDLE ALL THE FORM RELATED CODE
     var formHandle = document.forms.bookForm;
 
